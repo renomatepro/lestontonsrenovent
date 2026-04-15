@@ -348,8 +348,25 @@
       align-items: center;
     }
 
+    /* Mobile : tout centré */
+    .hero-left {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-sub { text-align: center; }
+
+    .hero-pills { justify-content: center; }
+
+    .hero-cta { justify-content: center; }
+
+    /* Desktop : retour à gauche */
     @media (min-width: 900px) {
       .hero-layout { grid-template-columns: 1.1fr 0.9fr; gap: 64px; }
+      .hero-left { text-align: left; align-items: flex-start; }
+      .hero-sub { text-align: left; }
     }
 
     /* Left */
@@ -917,16 +934,18 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
-      padding: 20px 28px;
+      text-align: center;
+      gap: 10px;
+      padding: 15px 24px;
       background: linear-gradient(135deg, var(--cta), var(--cta-dark));
       border-radius: var(--radius-lg);
       color: #fff;
-      font-weight: 900;
-      font-size: 1.2rem;
+      font-weight: 800;
+      font-size: 1.05rem;
       transition: all 200ms ease;
       cursor: pointer;
-      box-shadow: 0 8px 24px rgba(249,115,22,.3);
+      box-shadow: 0 6px 20px rgba(249,115,22,.3);
+      width: 100%;
     }
 
     .call-big-btn:hover {
@@ -1066,14 +1085,15 @@
     .sticky-call a {
       display: flex;
       align-items: center;
-      gap: 10px;
-      padding: 14px 28px;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 22px;
       background: var(--cta);
       color: #fff;
       border-radius: 100px;
-      font-weight: 800;
-      font-size: 1rem;
-      box-shadow: 0 8px 32px rgba(249,115,22,.45);
+      font-weight: 700;
+      font-size: .9rem;
+      box-shadow: 0 6px 24px rgba(249,115,22,.45);
       cursor: pointer;
       transition: all 200ms ease;
     }
@@ -1234,12 +1254,6 @@
       </nav>
 
       <div class="header-actions">
-        <a href="tel:0614575653" class="phone-link" aria-label="Appeler le 06 14 57 56 53">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.8 19.79 19.79 0 01.07 2.18 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
-          </svg>
-          <span class="phone-number">06 14 57 56 53</span>
-        </a>
         <a href="tel:0614575653" class="btn btn-primary" style="padding:10px 18px;font-size:.875rem;">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.8 19.79 19.79 0 01.07 2.18 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
           Appeler
@@ -1719,7 +1733,7 @@
       <div class="contact-info">
         <a href="tel:0614575653" class="call-big-btn" aria-label="Appeler le 06 14 57 56 53">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.8 19.79 19.79 0 01.07 2.18 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-          Appeler maintenant
+          Appeler
           <span style="font-size:.85rem;font-weight:600;opacity:.85">06 14 57 56 53</span>
         </a>
 
@@ -1886,7 +1900,7 @@
 <div class="sticky-call" aria-label="Appel rapide mobile">
   <a href="tel:0614575653">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.8 19.79 19.79 0 01.07 2.18 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-    Appeler maintenant
+    Appeler
   </a>
 </div>
 
